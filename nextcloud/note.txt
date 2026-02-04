@@ -1,0 +1,7 @@
+# When we first log in, the browser shows the circle. But when we refresh or reopen automatically logged in and everything works
+
+The problem is Trusted Domains or Overwrite Config Missing
+We need to fix /var/www/html/config/config.php
+
+'overwrite.cli.url' => 'https://drive-nextcloud.duckdns.org',
+'overwriteprotocol' => 'https',

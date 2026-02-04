@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: linkding-ingress
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+
+spec:
+  tls:
+  - hosts:
+    - dennisapp.duckdns.org
+    secretName: myapp-tls
+  ingressClassName: nginx
+  rules:
+  - host: dennisapp.duckdns.org
+    http:  
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: linkding-service
+            port:
+              number: 80

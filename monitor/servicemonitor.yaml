@@ -1,0 +1,20 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: blackbox-exporter
+  namespace: monitoring
+  labels:
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: blackbox-exporter
+  endpoints:
+    - port: http
+      path: /probe
+      params:
+        module: [http_2xx]
+        target: ["http://linkding.default.svc.cluster.local:9090"]
+      interval: 30s
+      scrapeTimeout: 10s
+

@@ -1,0 +1,87 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: homepage
+  namespace: homepage
+  labels:
+    app.kubernetes.io/name: homepage
+data:
+  settings.yaml: |
+    title: "Dennis' Homelab Dashboard"
+    headerStyle: clean
+    greeting:
+      enabled: true
+      text: "Welcome back, Dennis "
+    layout:
+      columns: 3
+      rows: auto
+  kubernetes.yaml: |
+    mode: cluster
+  custom.css: |
+    body {
+      background-color: #0f172a !important; /* dark navy */
+      color: #e2e8f0 !important;
+                        }
+
+    .service-card {
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+                                                    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+                                                                    }
+  custom.js: ""
+  bookmarks.yaml: |
+    - Developer:
+        - My Github Repository:
+            - abbr: GitHub
+              href: https://github.com/DennisWu0?tab=repositories
+              
+        - Manual Building a K8S Cluster via Kubeadm:
+            - abbr: Article
+              href: https://github.com/DennisWu0/Manual-building-a-k8s-cluster-via-kubeadm
+  services.yaml: |
+    - My First Group:
+        - Linkding:
+            href: https://dennisapp.duckdns.org
+            description: Taking note here dude
+            icon: mdi-bookmark-outline
+    - My Second Group:
+        - NextCloud:
+            href: https://drive-nextcloud.duckdns.org
+            description: Google Drive is outdated
+            icon: mdi-cloud-outline
+    - My Third Group:
+        - Homepage:
+            href: https://homepage-homelab.duckdns.org
+            description: Homepage is 😎
+            icon: mdi-home-outline
+  widgets.yaml: |
+    - datetime:
+        format:
+          timeStyle: short
+          dateStyle: long
+        text_size: xl
+    - kubernetes:
+        cluster:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+          label: "cluster"
+        nodes:
+          show: true
+          cpu: true
+          memory: true
+          showLabel: true
+    - resources:
+        backend: resources
+        expanded: true
+        cpu: true
+        memory: true
+        network: default
+    - search:
+        provider: duckduckgo
+        target: _blank

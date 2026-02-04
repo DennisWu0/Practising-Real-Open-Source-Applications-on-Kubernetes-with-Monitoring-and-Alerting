@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextcloud
+  namespace: nextcloud
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextcloud
+  template:
+    metadata:
+      labels:
+        app: nextcloud
+    spec:
+      securityContext:
+        fsGroup: 33
+      nodeSelector:
+        kubernetes.io/hostname: worker2
+      containers:
+      - name: nextcloud
+        image: nextcloud:32.0-apache
+        ports:
+        - containerPort: 80
+        securityContext:
+          runAsUser: 0
+          runAsGroup: 0        
+        env:
+        - name: MYSQL_HOST
+          value: mariadb
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              name: nextcloud-db-secret
+              key: mariadb-database
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: nextcloud-db-secret
+              key: mariadb-user
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: nextcloud-db-secret
+              key: mariadb-password
+        
+        - name: REDIS_HOST
+          value: redis   
+
+        volumeMounts:
+        - name: nextcloud-data
+          mountPath: /var/www/html
+      volumes:
+      - name: nextcloud-data
+        persistentVolumeClaim:
+          claimName: nextcloud-pvc

@@ -1,0 +1,25 @@
+1. Install NFS server on the separate VM
+
+sudo apt update
+sudo apt install nfs-kernel-server -y
+
+2. Create a shared directory
+
+sudo mkdir -p /data/nfs
+sudo chown -R nobody:nogroup /data/nfs
+sudo chmod -R 777 /data/nfs
+
+3. Export this directory
+
+sudo vim /etc/exports
+
+#Add this line
+/data/nfs  *(rw,sync,no_subtree_check,no_root_squash)
+
+#Then apply it:
+
+sudo exportfs -rav
+
+4. Install NFS client on all Kubernetes nodes
+
+sudo apt install nfs-common -y
