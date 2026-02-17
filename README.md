@@ -49,12 +49,12 @@ Apps:
 kubectl apply -f /linkding -R
 kubectl apply -f /nextcloud -R
 kubectl apply -f /homepage -R
+```
 
+📝 **Note**
 
->📝 **Note**
->
->This guide focuses on deploying applications on Kubernetes.
->If you don’t have a cluster yet, you can follow my step-by-step guide here:
->👉 Building a Kubernetes Cluster from Scratch (kubeadm)
->
->Once your cluster is ready, please go ahead and return to the above deployment steps.
+This guide focuses on deploying applications on Kubernetes.
+If you don’t have a cluster yet, you can follow my step-by-step guide here:
+👉 Building a Kubernetes Cluster from Scratch (kubeadm)
+
+Once your cluster is ready, please go ahead and return to the above deployment steps.
