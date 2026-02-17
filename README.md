@@ -5,6 +5,12 @@
 ## 🎯 Goal
 Deploy real open-source apps on a self-built Kubernetes cluster with a production mindset.
 
+Before we jump into writing any YAML file and building our projects, let’s stop for a moment and think about what we actually want to achieve here.
+
+Our goal here isn’t just to spin up containers and say “it works.” Instead, we want to truly understand how to deploy open-source applications properly on Kubernetes.
+
+For a detailed walkthrough of how the cluster itself was built, you can refer to my Medium article. [Running Real Open-Source Applications on Kubernetes with Monitoring and Alerting (Part 1)]([https://medium.com/@vuhuy999999/running-real-open-source-applications-on-kubernetes-with-monitoring-and-alerting-part-1-930daba016b0?postPublishedType=repub])
+
 ## 🏗 Architecture
 - 3 VMs (1 control plane, 2 workers)
 - kubeadm cluster
@@ -44,10 +50,10 @@ kubectl apply -f /nextcloud -R
 kubectl apply -f /homepage -R
 
 
-📝 **Note**
-
-This guide focuses on deploying applications on Kubernetes.
-If you don’t have a cluster yet, you can follow my step-by-step guide here:
-👉 Building a Kubernetes Cluster from Scratch (kubeadm)
-
-Once your cluster is ready, please go ahead and return to the above deployment steps.
+>📝 **Note**
+>
+>This guide focuses on deploying applications on Kubernetes.
+>If you don’t have a cluster yet, you can follow my step-by-step guide here:
+>👉 Building a Kubernetes Cluster from Scratch (kubeadm)
+>
+>Once your cluster is ready, please go ahead and return to the above deployment steps.
