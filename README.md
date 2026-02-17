@@ -9,8 +9,9 @@ Before we jump into writing any YAML file and building our projects, let’s sto
 
 Our goal here isn’t just to spin up containers and say “it works.” Instead, we want to truly understand how to deploy open-source applications properly on Kubernetes.
 
-For a detailed walkthrough of how the cluster itself was built, you can refer to my Medium article. [Running Real Open-Source Applications on Kubernetes with Monitoring and Alerting (Part 1)]([https://medium.com/@vuhuy999999/running-real-open-source-applications-on-kubernetes-with-monitoring-and-alerting-part-1-930daba016b0?postPublishedType=repub])
-
+For a detailed walkthrough of how the cluster itself was built, you can refer to my Medium article: 
+[Running Real Open-Source Applications on Kubernetes with Monitoring and Alerting (Part 1)]([https://medium.com/@vuhuy999999/running-real-open-source-applications-on-kubernetes-with-monitoring-and-alerting-part-1-930daba016b0?postPublishedType=repub])
+[Linkding](https://github.com/sissbruecker/linkding)
 ## 🏗 Architecture
 - 3 VMs (1 control plane, 2 workers)
 - kubeadm cluster
