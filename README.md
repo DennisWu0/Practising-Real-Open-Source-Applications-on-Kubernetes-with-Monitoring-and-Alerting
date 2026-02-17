@@ -2,14 +2,14 @@
 
 # Running Real Open-Source Applications on Kubernetes 🚀
 I’ve already written an article about building these open-source projects, feel free to check it out on Medium for a deeper look and some extra insights!
-[Running Real Open-Source Applications on Kubernetes with Monitoring and Alerting](https://medium.com/@vuhuy999999/running-real-open-source-applications-on-kubernetes-with-monitoring-and-alerting-part-1-930daba016b0) <br>
+[Running Real Open-Source Applications on Kubernetes with Monitoring and Alerting](https://medium.com/@vuhuy999999/running-real-open-source-applications-on-kubernetes-with-monitoring-and-alerting-part-1-930daba016b0) </br>
 
 ## 🎯 Goal
 Deploy real open-source apps on a self-built Kubernetes cluster with a production mindset.
 
 Before we jump into writing any YAML file and building our projects, let’s stop for a moment and think about what we actually want to achieve here.
 
-Our goal here isn’t just to spin up containers and say “it works.” Instead, we want to truly understand how to deploy open-source applications properly on Kubernetes.<br>
+Our goal here isn’t just to spin up containers and say “it works.” Instead, we want to truly understand how to deploy open-source applications properly on Kubernetes.</br>
 
 ## 🏗 Architecture
 - 3 VMs (1 control plane, 2 workers)
@@ -17,8 +17,8 @@ Our goal here isn’t just to spin up containers and say “it works.” Instead
 - Calico networking
 - MetalLB load balancer
 - NGINX Ingress
-- cert-manager for TLS
-<br>
+- cert-manager for TLS </br>
+
 ### Deploy Applications
 👉 `docs/app-deployment.md`
 
@@ -33,25 +33,24 @@ Apps:
 
 - Linkding (exercise)
 - Nextcloud
-- Homepage dashboard
-<br>
+- Homepage dashboard </br>
+
 ### Monitoring & Alerting (coming soon)
 👉 `docs/monitoring.md`
 
 - Prometheus
 - Grafana
-- Blackbox Exporter
-<br>
+- Blackbox Exporter </br>
+
 ---
-<br>
+
 ## 🚀 Quick Start
 ```bash
 kubectl apply -f /linkding -R
 kubectl apply -f /nextcloud -R
 kubectl apply -f /homepage -R
 ```
-<br>
-<br>
+
 📝 **Note**
 
 This guide focuses on deploying applications on Kubernetes.
