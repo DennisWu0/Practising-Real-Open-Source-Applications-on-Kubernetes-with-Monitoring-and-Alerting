@@ -1,6 +1,8 @@
 <img width="768" height="512" alt="12" src="https://github.com/user-attachments/assets/c766a19b-9d84-463c-b88d-9c3b1f21e91f" />
 
 # Running Real Open-Source Applications on Kubernetes 🚀
+I’ve already written an article about building these open-source projects, feel free to check it out on Medium for a deeper look and some extra insights!
+[Running Real Open-Source Applications on Kubernetes with Monitoring and Alerting](https://medium.com/@vuhuy999999/running-real-open-source-applications-on-kubernetes-with-monitoring-and-alerting-part-1-930daba016b0)
 
 ## 🎯 Goal
 Deploy real open-source apps on a self-built Kubernetes cluster with a production mindset.
@@ -55,6 +57,6 @@ kubectl apply -f /homepage -R
 
 This guide focuses on deploying applications on Kubernetes.
 If you don’t have a cluster yet, you can follow my step-by-step guide here:
-👉 Building a Kubernetes Cluster from Scratch (kubeadm)
+👉 [Building a Kubernetes Cluster from Scratch (kubeadm)](https://medium.com/@vuhuy999999/kubernetes-from-zero-to-automation-with-ansible-77eebc8fc9c3)
 
 Once your cluster is ready, please go ahead and return to the above deployment steps.
