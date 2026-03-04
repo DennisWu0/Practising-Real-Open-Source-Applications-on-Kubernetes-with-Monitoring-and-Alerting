@@ -3,7 +3,7 @@
 
 # Running Real Open-Source Applications on Kubernetes 🚀
 I’ve already written an article about building these open-source projects, feel free to check it out on Medium for a deeper look and some extra insights!
-[Running Real Open-Source Applications on Kubernetes with Monitoring and Alerting](https://medium.com/@vuhuy999999/running-real-open-source-applications-on-kubernetes-with-monitoring-and-alerting-part-1-930daba016b0) </br>
+[Turning Open-Source Projects into a Real Kubernetes Production Lab](https://medium.com/@vuhuy999999/running-real-open-source-applications-on-kubernetes-with-monitoring-and-alerting-part-1-930daba016b0) </br>
 
 ## 🎯 Goal
 Deploy real open-source apps on a self-built Kubernetes cluster with a production mindset.
