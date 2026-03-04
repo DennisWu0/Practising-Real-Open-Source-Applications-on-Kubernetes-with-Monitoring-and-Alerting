@@ -1,4 +1,5 @@
-<img width="768" height="512" alt="12" src="https://github.com/user-attachments/assets/c766a19b-9d84-463c-b88d-9c3b1f21e91f" />
+<img width="1920" height="1080" alt="image-2" src="https://github.com/user-attachments/assets/e7ba5292-0f0b-46c0-ad11-61a72c0703d9" />
+
 
 # Running Real Open-Source Applications on Kubernetes 🚀
 I’ve already written an article about building these open-source projects, feel free to check it out on Medium for a deeper look and some extra insights!
